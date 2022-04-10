@@ -13,8 +13,8 @@ var myPetsArray = [
     }
 ];
 function myPetsFunction(pets) {
-    return myPetsArray[1].name;
+    return pets;
 }
-console.log(myPetsFunction(myPetsArray));
+console.log(myPetsFunction(myPetsArray[1]));
 module.exports = myPetsFunction;
 module.exports.myPets = myPetsArray;

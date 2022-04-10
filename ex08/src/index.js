@@ -1,5 +1,3 @@
-const { keys } = require('lodash');
-const _=require('lodash');
 var contacts = [
     {
     "firstName": "John",
@@ -27,11 +25,7 @@ var contacts = [
     }
     ];
     function lookUpProfile(name, prop){
-        let u1 = _.find(users, (name) => {
-            let u2 = _.find(users.name, (prop) =>{
-                return 
-            })
-        });   
+        l
         
     }
 
