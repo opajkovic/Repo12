@@ -25,22 +25,23 @@ var contacts = [
     }
     ];
     function lookUpProfile(name, prop){
-        l
+       
+        contacts.forEach(name => {
+            if(name == contacts.firstName.value) {
+                if(prop == contacts.firstName.prop.value) {
+                    
+                    return contacts.firstName.prop.value;
+                } else {
+                    return "No such property";
+                }
+                
+            } else {
+                return "No such contact";
+            }});
         
     }
 
 
-        // contacts.forEach(name => {
-        // if(name == contacts.firstName) {
-        //     if(prop == contacts.lastName) {
-        //         return contacts.lastName.value;
-        //     } else {
-        //         return "No such property";
-        //     }
-            
-        // } else {
-        //     return "No such contact";
-        // }});
     
     console.log(lookUpProfile("John", "likes"));
     console.log(lookUpProfile("Jane", "lastName"));
