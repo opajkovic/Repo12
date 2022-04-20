@@ -24,17 +24,17 @@ var collection = {
     }
 };
 var oldCollection = JSON.parse(JSON.stringify(collection));
+var oldCollection = JSON.parse(JSON.stringify(collection));
 function updateRecords(object, id, prop, value) {
-    if(prop !="tracks" && value !="") {
-        object[id][prop]=value;
-    } else if(prop =="tracks" && object[id].hasOwnProperty("tracks")) {
-        newProp = [];
-        object[id][prop]= [];
+    if(prop ==="tracks" && !collection[id].hasOwnProperty([prop])) {
+        object[id][prop]=[];
         object[id][prop].push(value);
-    } else if(prop == "tracks" && value !="") {
+    } else if(prop =="tracks" && collection[id].hasOwnProperty([prop])) {
         object[id][prop].push(value);
+    } else if(!value) {
+        delete collection[id][prop];
     }
-    
+    return collection;
 }
 
 
