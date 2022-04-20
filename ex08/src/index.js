@@ -24,25 +24,18 @@ var contacts = [
     "likes": ["JavaScript", "Node", "HTML & CSS"]
     }
     ];
-    function lookUpProfile(name, prop){
-       
-        contacts.forEach(name => {
-            if(name == contacts.firstName.value) {
-                if(prop == contacts.firstName.prop.value) {
-                    
-                    return contacts.firstName.prop.value;
-                } else {
-                    return "No such property";
-                }
-                
+ function lookUpProfile(name, prop) {
+    for (var i = 0; i <= contacts.length; i++) {
+        if (contacts[i].firstName === name) {
+            if (contacts[i].hasOwnProperty(prop)) {
+                return contacts[i][prop];
             } else {
-                return "No such contact";
-            }});
+            return "No such property";
+            }}
+            return "No such contact";
+        }
         
-    }
-
-
-    
+    };    
     console.log(lookUpProfile("John", "likes"));
     console.log(lookUpProfile("Jane", "lastName"));
     console.log(lookUpProfile("Rob", "number"));
